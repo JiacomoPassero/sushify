@@ -54,7 +54,10 @@ def crea_menu(nome_file=None):
                 s = line.strip().split("=")
                 #se è un valore numerico lo salvo come float, altrimenti come stringa
                 try:
-                    argomenti[s[0]] = float(s[1])
+                    valore = float(s[1])
+                    if valore < 0:
+                        valore = 0
+                    argomenti[s[0]] = valore
                 except:
                     argomenti[s[0]] = s[1]
 
