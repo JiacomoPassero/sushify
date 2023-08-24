@@ -1,0 +1,26 @@
+Progetto per corso "complementi di programmazione"
+Il Sushify è un insieme di oggetti e funzioni che permettono di modellare un menu di un ristorate secondo 5 sapori: dorce,
+amaro,aspro,salato e (anche se tecnicamente non è un sapore), piccante.
+
+Il menu di default comprende 58 piatti diversi, ma è possibile usare un menu personalizzato, scrivibile su un file testuale
+con il seguente formato:
+
+[numero piatti nel menu]
+
+come prima riga del file, e successivamente per ogni piatto:
+
+numero=[numero identificativo del piatto]
+nome=[nome piatto]
+tipo=[tipologia del piatto]
+dolce=[punteggio numerico non negativo]
+amaro=[punteggio numerico non negativo]
+aspro=[punteggio numerico non negativo]
+salato=[punteggio numerico non negativo]
+piccante=[punteggio numerico non negativo]
+numero=[punteggio numerico non negativo]
+
+Sono poi disponibili varie funzioni per creare un menu, valutare la distanza tra i piatti, usando un modello vettoriale
+dove ogni asse corrispode a uno dei sapori, creare un menu dei suggerimenti ordinando tutti i piatti.
+
+E' possibile usare più funzioni di ordinamnto, permettendo di implementare il design pattern comportamentale "strategy", e 
+creare e valutare piatti composti da altri piatti (tipici dei ristoranti per qui questo reccomandation sistem è pensato)
