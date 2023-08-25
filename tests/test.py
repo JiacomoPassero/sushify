@@ -1,14 +1,15 @@
 import unittest
 import random
-from ..sushify.piatti import crea_menu, menu_suggerimento, trova_piatto
-from ..sushify.calcolo_distanza import cosine_similarity_mod
+from sushify.piatti import crea_menu, menu_suggerimento, trova_piatto
+from sushify.calcolo_distanza import cosine_similarity_mod
 
 
 class MyTestCase(unittest.TestCase):
 
     """Controllo che vengano caricati correttamente tutti gli elementi dal file"""
     def test_creazione_menu(self):
-        menu = crea_menu()
+
+        menu = crea_menu("menu_default")
         s = 0
         for k in menu:
             s = s + len(menu[k])
@@ -17,7 +18,7 @@ class MyTestCase(unittest.TestCase):
 
     "controllo che il nuovo menu abbia ordinato i piatti correttamente, verificando con un piatto scelto casualmente"
     def test_ordinamento_menu(self):
-        menu = crea_menu()
+        menu = crea_menu("menu_default")
         piatto = random.randint(1,54)
         piatto = trova_piatto(piatto,menu)
 
@@ -32,7 +33,7 @@ class MyTestCase(unittest.TestCase):
 
     """Controllo di integrità sulla funzione di ordinamento non causi errore anche con parametri erronei"""
     def test_funzione_ordinamento_errata(self):
-        menu = crea_menu()
+        menu = crea_menu("menu_default")
         piatto = trova_piatto(10, menu)
         #caso funzione sbagliata
         menu_ordinato = menu_suggerimento(menu,piatto,random.randint)

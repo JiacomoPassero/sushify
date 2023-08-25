@@ -1,5 +1,5 @@
 from calcolo_distanza import cosine_similarity_mod
-from piatti import crea_menu, trova_piatto, menu_suggerimento, distanza_piatto_composto
+from sushify.piatti import crea_menu, trova_piatto, menu_suggerimento, distanza_piatto_composto
 
 menu = crea_menu()
 

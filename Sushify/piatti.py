@@ -1,4 +1,7 @@
 from functools import reduce
+
+
+
 """I piatti sono modellati mediante i 4 dei cinque sapori principali e il piccante; e da una categoria che ne identifica la
 tipologia(nel caso di sushi si parla di nigiri, gunkan... il tipo del pitto).
 I sapori serviranno a misurare la distanza tra un piatto e l'altro, mentre la categoria verrà usata per dividere i piatti
@@ -34,13 +37,14 @@ class Piatto:
     def __str__(self):
         return ""+str(self.numero)+", "+self.nome+", "+self.tipo+", "+self.ingredienti+" "+str(self.sapori_in_lista())
 
-"""Funzione per creare un menu: un dizionatrio contenente diverse liste di piatti, a partire dal nome di un file passato
-oppure da un file di default nel caso non sia diato alcun parametro"""
+"""Funzione per creare un menu: un dizionatrio contenente diverse liste di piatti.
+E' necessario passare il nome del file che si vuole utilizzare come menu."""
 def crea_menu(nome_file=None):
     menu = {}
     if nome_file == None:
-        nome_file = "menu_default"
-
+        print("Nessun file passato")
+        return menu
+   
     with open(nome_file,"r") as file:
         #leggo il numero di piatti presenti nel menu
         line = file.readline()

@@ -1,5 +1,5 @@
 Progetto per corso "complementi di programmazione"
-Il Sushify è un insieme di oggetti e funzioni che permettono di modellare un menu di un ristorate secondo 5 sapori: dorce,
+Il Sushify è un insieme di oggetti e funzioni che permettono di modellare un menu di un ristorate secondo 5 sapori: dolce,
 amaro,aspro,salato e (anche se tecnicamente non è un sapore), piccante.
 
 Il menu di default comprende 58 piatti diversi, ma è possibile usare un menu personalizzato, scrivibile su un file testuale
