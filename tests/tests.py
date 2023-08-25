@@ -1,7 +1,7 @@
 import unittest
 import random
-from piatti import crea_menu, menu_suggerimento, trova_piatto
-from calcolo_distanza import cosine_similarity_mod
+from ..sushify.piatti import crea_menu, menu_suggerimento, trova_piatto
+from ..sushify.calcolo_distanza import cosine_similarity_mod
 
 
 class MyTestCase(unittest.TestCase):
