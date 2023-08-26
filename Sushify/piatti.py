@@ -2,6 +2,7 @@ from functools import reduce
 
 
 
+
 """I piatti sono modellati mediante i 4 dei cinque sapori principali e il piccante; e da una categoria che ne identifica la
 tipologia(nel caso di sushi si parla di nigiri, gunkan... il tipo del pitto).
 I sapori serviranno a misurare la distanza tra un piatto e l'altro, mentre la categoria verrà usata per dividere i piatti
@@ -128,8 +129,6 @@ def distanza_piatto_composto(piatto_piaciuto, funzione_distanza, lista_piatti):
     lista_punteggi = map(lambda x: funzione_distanza(piatto_piaciuto.sapori_in_lista(), x.sapori_in_lista()), lista_piatti)
     lista_punteggi = list(lista_punteggi)
 
-    #for e in lista_punteggi: print(e) #debug...
-
     #faccio la media sommando i punteggi
-    punteggio_medio = reduce(lambda x,y: x+y, lista_punteggi)
+    punteggio_medio = sum(lista_punteggi)
     return punteggio_medio/len(lista_piatti)

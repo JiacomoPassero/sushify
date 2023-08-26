@@ -1,7 +1,7 @@
-from calcolo_distanza import cosine_similarity_mod
+from sushify.calcolo_distanza import cosine_similarity_mod
 from sushify.piatti import crea_menu, trova_piatto, menu_suggerimento, distanza_piatto_composto
 
-menu = crea_menu()
+menu = crea_menu("menu_default")
 
 for k in menu:
     s = menu[k]
