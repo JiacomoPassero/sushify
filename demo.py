@@ -29,17 +29,19 @@ if piatto_piaciuto != None:
                 print("    ",str(elemento),"   ",fuzione_distanza(elemento.sapori_in_lista(), piatto_piaciuto.sapori_in_lista()))
 
     print("Il tuo piatto: ",str(piatto_piaciuto))
+
+    barca_nigiri = []
+    barca_nigiri.append(trova_piatto(23,menu))
+    barca_nigiri.append(trova_piatto(31,menu))
+    barca_nigiri.append(trova_piatto(41,menu))
+    barca_nigiri.append(trova_piatto(13,menu))
+
+    print("Distanza da un piatto composto: ",distanza_piatto_composto(piatto_piaciuto, cosine_similarity_mod, barca_nigiri))
 else:
     print("Piatto non trovato")
 
 
-barca_nigiri = []
-barca_nigiri.append(trova_piatto(23,menu))
-barca_nigiri.append(trova_piatto(31,menu))
-barca_nigiri.append(trova_piatto(41,menu))
-barca_nigiri.append(trova_piatto(13,menu))
 
-print("Distanza da un piatto composto: ",distanza_piatto_composto(piatto_piaciuto, cosine_similarity_mod, barca_nigiri))
 
 
 
